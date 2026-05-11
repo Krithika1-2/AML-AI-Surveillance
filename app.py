@@ -74,37 +74,6 @@ div[data-testid="stDataFrame"] {
     padding-top: 1rem;
 }
 
-.login-container {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:80vh;
-}
-
-.login-card {
-    background: rgba(255,255,255,0.05);
-    padding: 50px;
-    border-radius: 24px;
-    width: 500px;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(14px);
-    box-shadow: 0px 0px 40px rgba(0,0,0,0.4);
-}
-
-.login-title {
-    color:white;
-    font-size:40px;
-    font-weight:bold;
-    margin-bottom:10px;
-}
-
-.login-subtitle {
-    color:#A0AEC0;
-    font-size:18px;
-    margin-bottom:25px;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
@@ -115,72 +84,23 @@ uploaded_file = st.sidebar.file_uploader(
 
 if uploaded_file is None:
 
-    st.markdown(
-        """
-        <style>
+    col1, col2, col3 = st.columns([1,2,1])
 
-        .center-wrapper{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:80vh;
-        }
+    with col2:
 
-        .aml-card{
-            width:550px;
-            padding:50px;
-            border-radius:25px;
-            background:rgba(255,255,255,0.05);
-            border:1px solid rgba(255,255,255,0.08);
-            backdrop-filter:blur(15px);
-            text-align:center;
-            box-shadow:0px 0px 40px rgba(0,0,0,0.5);
-        }
+        st.markdown("")
 
-        .aml-title{
-            font-size:42px;
-            color:white;
-            font-weight:bold;
-            margin-bottom:10px;
-        }
+        st.markdown("")
 
-        .aml-subtitle{
-            color:#A0AEC0;
-            font-size:18px;
-            margin-bottom:25px;
-        }
+        st.markdown("")
 
-        .aml-text{
-            color:#00E5FF;
-            font-size:18px;
-            line-height:1.6;
-        }
+        st.markdown("""
+        # 🛡️ AML Surveillance Platform
 
-        </style>
+        ### AI-Powered Compliance Intelligence System
 
-        <div class="center-wrapper">
-
-            <div class="aml-card">
-
-                <div class="aml-title">
-                    🛡️ AML Surveillance Platform
-                </div>
-
-                <div class="aml-subtitle">
-                    AI-Powered Compliance Intelligence System
-                </div>
-
-                <div class="aml-text">
-                    Upload AML transaction dataset from the sidebar
-                    to begin intelligent investigation workflow.
-                </div>
-
-            </div>
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+        Upload AML transaction dataset from the sidebar to begin intelligent investigation workflow.
+        """)
 
     st.stop()
 
@@ -843,26 +763,10 @@ st.markdown("---")
 
 st.markdown("""
 
-<div style="
-background:rgba(255,255,255,0.04);
-padding:20px;
-border-radius:20px;
-text-align:center;
-border:1px solid rgba(255,255,255,0.08);
-">
-
-<h3 style="color:#00E5FF;">
 AI-Powered AML Surveillance Platform
-</h3>
 
-<p style="color:white;">
 Intelligent Alert Prioritization • Relationship Intelligence • Group Risk Detection
-</p>
 
-<p style="color:gray;">
 Enterprise AML Compliance Prototype
-</p>
 
-</div>
-
-""", unsafe_allow_html=True)
+""")
