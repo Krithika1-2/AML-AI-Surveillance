@@ -48,7 +48,7 @@ section[data-testid="stSidebar"] {
 }
 
 [data-testid="stMetricValue"] {
-    color: #00E5FF;
+    color: #FF4B4B;
     font-size: 34px;
 }
 
@@ -399,7 +399,14 @@ if page == "Executive Overview":
 
         color="alert_priority",
 
-        text="count"
+        text="count",
+
+        color_discrete_sequence=[
+            "#FF4B4B",
+            "#FF6B6B",
+            "#FF8787",
+            "#FFA8A8"
+        ]
 
     )
 
@@ -436,7 +443,14 @@ if page == "Executive Overview":
 
         size="fund_transfer_count",
 
-        hover_data=["client_id"]
+        hover_data=["client_id"],
+
+        color_discrete_map={
+            "Critical":"#FF0000",
+            "High":"#FF4B4B",
+            "Medium":"#FF8787",
+            "Low":"#FFC9C9"
+        }
 
     )
 
@@ -474,7 +488,9 @@ if page == "Executive Overview":
 
         y="risk",
 
-        color="risk"
+        color="risk",
+
+        color_continuous_scale="Reds"
 
     )
 
@@ -536,7 +552,9 @@ elif page == "Alert Intelligence":
 
         y="login_frequency",
 
-        z="ai_suspicion_probability"
+        z="ai_suspicion_probability",
+
+        color_continuous_scale="Reds"
 
     )
 
@@ -694,7 +712,9 @@ elif page == "Suspicious Cluster Explorer":
 
         color="avg_transfer_count",
 
-        hover_data=["group_id"]
+        hover_data=["group_id"],
+
+        color_continuous_scale="Reds"
 
     )
 
